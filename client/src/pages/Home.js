@@ -19,7 +19,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch("http://localhost:4000/post", {
+            const response = await fetch("https://blog-gokul.onrender.com/post", {
                 method: "GET",
             })
             const resPosts = await response.json();
