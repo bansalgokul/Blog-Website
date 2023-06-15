@@ -14,12 +14,13 @@ const Header = () => {
             const responseJson = await fetch("https://blog-gokul.onrender.com/profile", {
                 credentials: "include",
             });
-            const responseData = await responseJson.json();
-            console.log(responseData);
-            setUserInfo(responseData);
+            if (responseJson.ok) {
+                const responseData = await responseJson.json();
+                setUserInfo(responseData);
+            }
         }
         fetchData();
-    }, [setUserInfo]);
+    }, []);
 
     const logout = async () => {
         await fetch('https://blog-gokul.onrender.com/logout', {

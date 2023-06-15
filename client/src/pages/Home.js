@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BlogPostCard from '../components/BlogPostCard';
 import "../styles/home.css"
-// import image1 from "../images/download.png"
-
-// const blogPosts = [
-//     {
-//         image: image1,
-//         category: "tech",
-//         title: "This is Blog Post 1",
-//         description: "This is description of blog post 1",
-//         author: "Gokul Bansal"
-//     }
-// ]
 
 const Home = () => {
 

@@ -13,7 +13,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' })
 const fs = require("fs");
 const PORT = process.env.PORT || 3030;
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ origin: "http://localhost:3001" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
