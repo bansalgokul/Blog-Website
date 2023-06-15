@@ -35,7 +35,7 @@ const EditPage = () => {
     const [postInfo, setPostInfo] = useState(null);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blog-gokul.onrender.com/post/${id}`)
             .then(response => response.json())
             .then(postInfo => { setPostInfo(postInfo); return postInfo })
             .then(postInfo => {
@@ -61,7 +61,7 @@ const EditPage = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:4000/post", {
+            const response = await fetch("https://blog-gokul.onrender.com/post", {
                 method: 'PUT',
                 body: data,
                 credentials: 'include',

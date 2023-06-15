@@ -13,7 +13,7 @@ const PostPage = () => {
     const { userInfo } = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blog-gokul.onrender.com/post/${id}`)
             .then(response => response.json())
             .then(postInfo => { setPostInfo(postInfo); return postInfo });
     }, [setPostInfo, id]);
@@ -33,7 +33,7 @@ const PostPage = () => {
             <article className='post'>
                 <div className="post_header">
                     <div className="post_cover">
-                        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" className='post_cover_image' />
+                        <img src={`https://blog-gokul.onrender.com/${postInfo.cover}`} alt="" className='post_cover_image' />
                         {userInfo.id === postInfo.author._id && (
                             <div className="edit_post">
                                 <Link to={`/edit/${postInfo._id}`}>Edit <FontAwesomeIcon icon={faPen} className='edit_post_icon' /></Link>
