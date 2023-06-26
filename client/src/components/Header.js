@@ -11,7 +11,7 @@ const Header = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const responseJson = await fetch("http://localhost:4000/profile", {
+            const responseJson = await fetch("https://blog-gokul.onrender.com/profile", {
                 credentials: "include",
             });
             if (responseJson.ok) {
@@ -23,7 +23,7 @@ const Header = () => {
     }, []);
 
     const logout = async () => {
-        await fetch('http://localhost:4000/logout', {
+        await fetch('https://blog-gokul.onrender.com/logout', {
             method: 'POST',
             credentials: 'include',
         })
