@@ -43,6 +43,9 @@ const CreatePage = () => {
             const response = await fetch("http://localhost:4000/post", {
                 method: 'POST',
                 body: data,
+                headers: {
+                    'Cookie': document.cookie,
+                },
                 credentials: 'include',
             })
             const responseData = await response.json();
