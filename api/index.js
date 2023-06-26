@@ -39,7 +39,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(reqLogger);
 
 // Cross Origin Resource Sharing
-const whitelist = ['https://blog-gokul.vercel.app', 'http://localhost:3001', 'http://localhost:4000'];
+const whitelist = ['https://blog-gokul.vercel.app'];
 const corsOption = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
