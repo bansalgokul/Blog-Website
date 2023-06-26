@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 4000;
 app.use(reqLogger);
 
 // Cross Origin Resource Sharing
-const whitelist = ['https://blog-gokul.vercel.app'];
+const whitelist = ['https://blog-gokul.vercel.app', 'http://localhost:3000'];
 const corsOption = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -72,9 +72,9 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler);
 
-process.on('unhandledRejection', (reason, promise) => {
-    console.log(`Unhandled Promise Rejection: ${reason}`);
-});
+// process.on('unhandledRejection', (reason, promise) => {
+//     console.log(`Unhandled Promise Rejection: ${reason}`);
+// });
 
 app.listen(PORT, () => {
     console.log(`App listening on ${PORT}`);

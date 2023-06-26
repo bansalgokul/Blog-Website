@@ -1,1 +1,7 @@
 2023-06-26	09:36:47	1178ddcf-1b6b-4e22-834e-84546efd8e55	SyntaxError	Unexpected token u in JSON at position 4
+2023-06-26	13:06:38	e2cd3d6e-978f-4cbe-af73-4d331fd6636e	Error	Not allowed by cors
+2023-06-26	13:06:38	576966e3-198b-4fd3-abb1-073cd488603b	Error	Not allowed by cors
+2023-06-26	13:06:38	5d0cdd16-43c8-4db1-adc4-06393937c99f	Error	Not allowed by cors
+2023-06-26	13:06:38	695f60e8-a656-475a-9c26-650fdeb17a78	Error	Not allowed by cors
+2023-06-26	13:07:24	a19bf436-4360-488a-9a0c-7258c59b623e	JsonWebTokenError	invalid signature
+2023-06-26	13:07:25	87d0fd47-8d77-45d6-9c8c-99c792707d5b	JsonWebTokenError	invalid signature
