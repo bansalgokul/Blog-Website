@@ -1,1 +1,2 @@
 2023-06-26	09:36:47	1178ddcf-1b6b-4e22-834e-84546efd8e55	SyntaxError	Unexpected token u in JSON at position 4
+2023-06-26	20:58:22	139752a5-666d-45cb-bcef-0ace9d0bedf4	JsonWebTokenError	jwt must be provided
