@@ -10,23 +10,20 @@ const Header = () => {
     const { userInfo, setUserInfo } = useContext(UserContext);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const responseJson = await fetch("https://blog-gokul.onrender.com/profile", {
-                credentials: "include",
+        fetch('http://localhost:4000/profile', {
+            credentials: 'include',
+        }).then(response => {
+            response.json().then(userInfo => {
+                setUserInfo(userInfo);
             });
-            if (responseJson.ok) {
-                const responseData = await responseJson.json();
-                setUserInfo(responseData);
-            }
-        }
-        fetchData();
+        });
     }, []);
 
     const logout = async () => {
-        await fetch('https://blog-gokul.onrender.com/logout', {
-            method: 'POST',
+        fetch('http://localhost:4000/logout', {
             credentials: 'include',
-        })
+            method: 'POST',
+        });
         setUserInfo(null);
     }
 

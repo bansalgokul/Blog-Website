@@ -8,7 +8,7 @@ const BlogPostCard = ({ _id, title, summary, content, cover, createdAt, author }
         <article className='blog_card'>
             <div className='card_header'>
                 <Link to={'/post/' + _id}>
-                    <img src={"https://blog-gokul.onrender.com/" + cover} alt={title} className='card_header_image' width='600' />
+                    <img src={"http://localhost:4000/" + cover} alt={title} className='card_header_image' width='600' />
                 </Link>
             </div>
             <div className="card_body">

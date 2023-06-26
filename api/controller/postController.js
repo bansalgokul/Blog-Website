@@ -77,7 +77,6 @@ const getPostById = async (req, res) => {
 
 }
 
-app.use(errorHandler);
 
 process.on('unhandledRejection', (reason, promise) => {
     console.log(`Unhandled Promise Rejection: ${reason}`);
