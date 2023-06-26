@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const fs = require("fs");
 const Post = require('../models/Post');
+const secret = process.env.SECRET_KEY;
 
 const getPost = async (req, res) => {
 
