@@ -32,7 +32,6 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 
 // env variables
 const PORT = process.env.PORT || 4000;
-const MONGO_URI = process.env.MONGO_URI;
 
 
 // Req logger
@@ -58,7 +57,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-mongoose.connect(MONGO_URI);
+mongoose.connect("mongodb+srv://bansalgokul134:gokulmongo0@cluster0.nohi4wx.mongodb.net/?retryWrites=true&w=majority");
 
 app.get('/', (req, res) => {
 
