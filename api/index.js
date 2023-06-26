@@ -1,6 +1,4 @@
 // common js module
-const fs = require('fs');
-const fsPromises = require("fs").promises;
 const { error, profile } = require('console');
 const path = require("path");
 
@@ -8,8 +6,6 @@ const path = require("path");
 const express = require('express');
 const cors = require('cors');
 const mongoose = require("mongoose");
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 require('dotenv').config();
@@ -28,7 +24,6 @@ const authRouter = require("./router/authRouter");
 const profileRouter = require("./router/profileRouter");
 
 const app = express();
-const uploadMiddleware = multer({ dest: 'uploads/' });
 
 // env variables
 const PORT = process.env.PORT || 4000;

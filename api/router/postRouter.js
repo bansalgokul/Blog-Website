@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const postController = require('../controller/postController');
 const multer = require("multer");
-const uploadMiddleware = multer({ dest: 'uploads/' });
+const uploadMiddleware = multer({ dest: '../uploads/' });
 
 router.route('/')
     .get(postController.getPost)
