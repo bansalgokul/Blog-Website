@@ -19,10 +19,12 @@ const Login = () => {
             credentials: 'include',
         })
 
-        if (response.status === 200) {
-            const userData = await response.json();
-            setUserInfo(userData);
-            setRedirect(true);
+        if (response.ok) {
+            response.json().then(userInfo => {
+                setUserInfo(userInfo);
+                setRedirect(true);
+            });
+
         } else {
             alert("Login Unsuccessful");
         }

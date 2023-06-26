@@ -7,14 +7,11 @@ const Home = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch("https://blog-gokul.onrender.com/post", {
-                method: "GET",
-            })
-            const resPosts = await response.json();
-            setPosts(resPosts);
-        }
-        fetchPosts();
+        fetch('http://localhost:4000/post').then(response => {
+            response.json().then(posts => {
+                setPosts(posts);
+            });
+        });
     }, []);
 
     return (
